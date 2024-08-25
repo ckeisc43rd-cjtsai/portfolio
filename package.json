@@ -1,8 +1,11 @@
 {
-  "name": "react-portfolio-template",
+  "name": "portfolio",
   "version": "3.0",
   "private": true,
+  "homepage": "https://github.com/ckeisc43rd-cjtsai/portfolio",
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "3.0",
   "private": true,
-  "homepage": "https://github.com/ckeisc43rd-cjtsai/portfolio",
+  "_homepage": "https://cjtsai.com",
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "next build && next export ",
+    "deploy": "gh-pages -d out -r https://github.com/ckeisc43rd-cjtsai/portfolio.git",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -34,7 +34,8 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "8.15.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "^9.9.1",
+    "eslint-config-next": "12.1.6",
+    "gh-pages": "^6.1.1"
   }
 }

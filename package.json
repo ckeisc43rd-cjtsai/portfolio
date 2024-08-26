@@ -4,12 +4,13 @@
   "private": true,
   "_homepage": "https://cjtsai.com",
   "scripts": {
-    "predeploy": "next build && next export ",
-    "deploy": "gh-pages -d out -r https://github.com/ckeisc43rd-cjtsai/portfolio.git",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "predeploy": "yarn build && yarn export && echo 'cjtsai.com' > out/CNAME && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
